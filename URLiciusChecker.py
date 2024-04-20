@@ -8,15 +8,20 @@ print('''
 | | | |    /| |   | |/ __| |/ _ \| | | / __| | |   | '_ \ / _ \/ __| |/ / _ \ '__|
 | |_| | |\ \| |___| | (__| | (_) | |_| \__ \ | \__/\ | | |  __/ (__|   <  __/ |   
  \___/\_| \_\_____/_|\___|_|\___/ \__,_|___/  \____/_| |_|\___|\___|_|\_\___|_|   
-                                                                            v0.1.0
+                                                                            v0.1.1
 ''')
 
 
 def get_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description='Check if a URL is suspicious')
-    parser.add_argument('--url', metavar='URL',
-                        required=True, help='URL to check')
+        description='Check if a URL is suspicious'
+    )
+
+    parser.add_argument(
+        '--url', metavar='URL', required=True,
+        help='URL to check'
+    )
+
     return parser.parse_args()
 
 
